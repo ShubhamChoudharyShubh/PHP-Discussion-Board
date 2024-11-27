@@ -1,5 +1,5 @@
 <div class="container">
-    <h1>Login</h1>
+    <h1 class="heading">Login</h1>
 
     <form action="./server/requests.php" method="post">
 

@@ -22,7 +22,7 @@ if (isset($_POST['signup'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
     $username="";
-    $query = "select * from users where email='$email' and password='$password'";
+    $query = "SELECT * FROM users WHERE email='$email' AND password='$password'";
     $result = $conn->query($query);
     if ($result->num_rows == 1) {
         foreach ($result as $row) {
@@ -38,4 +38,4 @@ if (isset($_POST['signup'])) {
 } else if (isset($_GET['logout'])){
         session_unset();
         header("location: /MY-Projects-PHP-MYSQL/Discussion-Board/");
-}
+} 

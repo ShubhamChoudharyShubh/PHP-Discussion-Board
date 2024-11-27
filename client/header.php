@@ -1,6 +1,8 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img src="./public/logo.png" alt=""></a>
+    <a class="navbar-brand" href="#">
+     <img src="./public/logo.png" alt="Logo" class="logo-img">
+    </a>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
@@ -11,6 +13,9 @@
         if (isset($_SESSION['user']) && isset($_SESSION['user']['username'])) { ?>
           <li class="nav-item">
             <a class="nav-link" href="./server/requests.php?logout=true">Logout</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="?ask=true">Ask A Question</a>
           </li>
         <?php } ?>
 

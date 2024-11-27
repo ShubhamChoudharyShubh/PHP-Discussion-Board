@@ -5,3 +5,14 @@ a{
 .margin-bottom-15{
    margin-bottom: 15px;
 }
+
+.heading{
+    text-align: center;
+}
+
+/* CSS for the logo */
+.logo-img {
+    max-height: 100px; /* Adjust the height to fit the navbar */
+    width: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure the logo fits without distortion */
+}
