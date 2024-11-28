@@ -11,9 +11,10 @@ if (isset($_POST['signup'])) {
     (`id`,`username`,`email`,`password`,`address`) values(NULL,'$username','$email','$password','$address')");
 
     $result = $user->execute();
+    $user->insert_id;
 
     if ($result) {
-        $_SESSION["user"] = ["username" => $username, "email" => $email];
+        $_SESSION["user"] = ["username" => $username, "email" => $email, "user_id" => $user->insert_id];
         header("location: /MY-Projects-PHP-MYSQL/Discussion-Board/");
     } else {
         echo "New user not registered";
@@ -22,14 +23,16 @@ if (isset($_POST['signup'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
     $username="";
+    $user_id = 0;
     $query = "SELECT * FROM users WHERE email='$email' AND password='$password'";
     $result = $conn->query($query);
     if ($result->num_rows == 1) {
         foreach ($result as $row) {
 
             $username = $row['username'];
+            $user_id = $row['id'];
         }
-         $_SESSION["user"] = ["username"=>$username,"email"=>$email];
+         $_SESSION["user"] = ["username"=>$username,"email"=>$email, "user_id" => $user_id];
         header("location: /MY-Projects-PHP-MYSQL/Discussion-Board/");
 
     } else {
@@ -38,4 +41,23 @@ if (isset($_POST['signup'])) {
 } else if (isset($_GET['logout'])){
         session_unset();
         header("location: /MY-Projects-PHP-MYSQL/Discussion-Board/");
-} 
+} else if(isset($_POST['ask'])){
+       
+         $title = $_POST['title'];
+         $description = $_POST['description'];
+         $category_id = $_POST['category'];
+         $user_id = $_SESSION['user']['user_id'];
+     
+         $question = $conn->prepare("Insert into `questions` 
+         (`id`,`title`,`description`,`category_id`,`user_id`) values(NULL,'$title','$description','$category_id','$user_id')");
+     
+         $result = $question->execute();
+         $question->insert_id;
+     
+         if ($result) {
+             header("location: /MY-Projects-PHP-MYSQL/Discussion-Board/");
+         } else {
+             echo "Question Not Submitted";
+         }
+
+}

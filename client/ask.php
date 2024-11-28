@@ -5,7 +5,7 @@
 
   <div class="col-6 offset-sm-3 margin-bottom-15">
     <label for="title" class="form-label">Title</label>
-    <input type="text" name="email" class="form-control" id="title" placeholder="Enter Questions">
+    <input type="text" name="title" class="form-control" id="title" placeholder="Enter Questions">
   </div>
   <div class="col-6 offset-sm-3 margin-bottom-15">
     <label for="description" class="form-label">Description</label>
@@ -20,7 +20,7 @@
   </div>
   
   <div class="col-6 offset-sm-3">
-     <button type="submit" name="login" class="btn btn-primary">Login</button>
+     <button type="submit" name="ask" class="btn btn-primary">Ask Question</button>
   </div>
 
 </form>

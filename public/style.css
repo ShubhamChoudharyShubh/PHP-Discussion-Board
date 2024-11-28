@@ -16,3 +16,19 @@ a{
     width: auto; /* Maintain aspect ratio */
     object-fit: contain; /* Ensure the logo fits without distortion */
 }
+
+/* css for question list home page  */
+.question-list{
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px;
+}
+.question-list h4{
+    margin: 0;
+    padding: 0;
+}
+.question-list a, .question-title{
+    font-size: 18px;
+    text-decoration: none;
+    color: rgb(0, 133, 186) !important;
+}
