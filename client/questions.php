@@ -17,13 +17,15 @@
       $query="select * from questions";
      }
      $result = $conn->query($query);
-     foreach($result as $row){
-        $title= $row['title'];
-        $id= $row['id'];
-        echo "<div class='row question-list'>
-         <h4><a href='?q-id=$id'>$title</a></h4>
-        </div>";
-     }
+     foreach ($result as $row) {
+         $title = $row['title'];
+         $id = $row['id'];
+         echo "<div class='row question-list'>
+             <h4 class='my-question'><a href='?q-id=$id'>$title</a>";
+         echo isset($uid) ? "<a href='./server/requests.php?delete=$id'>Delete</a>" : NULL;
+         echo "</h4></div>";
+     }     
+     
    ?>
 </div>
 <div class="col-4">

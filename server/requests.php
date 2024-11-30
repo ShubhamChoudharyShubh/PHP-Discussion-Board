@@ -75,6 +75,15 @@ if (isset($_POST['signup'])) {
     } else {
         echo "Answer Not Submitted";
     }
+}else if(isset($_GET["delete"])){
+  echo $qid= $_GET["delete"];
+   $query= $conn->prepare("delete from questions where id =$qid");
+   $result = $query->execute();
+   if($result){
+    header("location: /MY-Projects-PHP-MYSQL/Discussion-Board");
+   }else{
+    echo "Question Not Deleted";
+   }
 }
 
 ?>

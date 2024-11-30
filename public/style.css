@@ -39,3 +39,9 @@ a{
    margin-bottom: 10px;
    padding: 5px;
 }
+
+/* my question delte butoon class */
+.my-question{
+    display: flex;
+    justify-content: space-between;
+}
