@@ -32,3 +32,10 @@ a{
     text-decoration: none;
     color: rgb(0, 133, 186) !important;
 }
+
+/* css for answers */
+.answer-wrapper{
+   border-bottom: 1px solid red;
+   margin-bottom: 10px;
+   padding: 5px;
+}

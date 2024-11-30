@@ -60,4 +60,21 @@ if (isset($_POST['signup'])) {
              echo "Question Not Submitted";
          }
 
+}else if(isset($_POST["answer"])){
+    $answer = $_POST['answer'];
+    $question_id = $_POST['question_id'];
+    $user_id = $_SESSION['user']['user_id'];
+
+    $query = $conn->prepare("Insert into `answers` 
+    (`id`,`answer`,`question_id`,`user_id`) values(NULL,'$answer','$question_id','$user_id')");
+
+    $result = $query->execute();
+
+    if ($result) {
+        header("location: /MY-Projects-PHP-MYSQL/Discussion-Board?q-id=$question_id");
+    } else {
+        echo "Answer Not Submitted";
+    }
 }
+
+?>

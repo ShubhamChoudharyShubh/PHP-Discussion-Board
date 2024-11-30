@@ -22,10 +22,13 @@
   }elseif(isset($_GET['q-id'])) {
     $qid=$_GET['q-id'];
     include('./client/question-details.php');
-  }else{
-    include('./client/questions.php');
+  } elseif (isset($_GET['c-id'])) { // Check if 'c-id' is set
+      $cid = $_GET['c-id'];         // Assign its value
+      include('./client/questions.php');
+  } else {
+      include('./client/questions.php');
   }
-
+  
   ?>
 
 </body>
