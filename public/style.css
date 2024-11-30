@@ -12,7 +12,7 @@ a{
 
 /* CSS for the logo */
 .logo-img {
-    max-height: 100px; /* Adjust the height to fit the navbar */
+    max-height: 60px; /* Adjust the height to fit the navbar */
     width: auto; /* Maintain aspect ratio */
     object-fit: contain; /* Ensure the logo fits without distortion */
 }
