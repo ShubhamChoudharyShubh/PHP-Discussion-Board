@@ -11,18 +11,20 @@
         <li class="nav-item">
           <a class="nav-link text-white" href="./">Home</a>
         </li>
-
         <li class="nav-item">
           <a class="nav-link text-white" href="#">Category</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Latest Questions</a>
+          <a class="nav-link text-white" href="?latest=true">Latest Questions</a>
         </li>
 
         <?php if (isset($_SESSION['user']) && isset($_SESSION['user']['username'])) { ?>
           
           <li class="nav-item">
             <a class="nav-link text-white" href="?ask=true">Ask A Question</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="?u-id=<?php echo $_SESSION['user']['user_id']?>">My Questions</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-white" href="./server/requests.php?logout=true">Logout</a>
@@ -40,6 +42,10 @@
         <?php } ?>
 
       </ul>
+      <form class="d-flex" action="">
+       <input class="form-control me-2" name="search" type="search" placeholder="Search Questions">
+       <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
     </div>
   </div>
 </nav>
