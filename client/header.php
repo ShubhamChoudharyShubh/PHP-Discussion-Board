@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
   <div class="container">
     <a class="navbar-brand" href="./">
       <img src="./public/logo.png" alt="Logo" class="logo-img">
@@ -7,7 +7,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav ms-auto">
         <li class="nav-item">
           <a class="nav-link text-white" href="./">Home</a>
         </li>
@@ -16,7 +16,6 @@
         </li>
 
         <?php if (isset($_SESSION['user']) && isset($_SESSION['user']['username'])) { ?>
-          
           <li class="nav-item">
             <a class="nav-link text-white" href="?ask=true">Ask A Question</a>
           </li>
@@ -26,7 +25,6 @@
           <li class="nav-item">
             <a class="nav-link text-white" href="./server/requests.php?logout=true">Logout (<?php echo ucfirst($_SESSION['user']['username'])?>)</a>
           </li>
-         
         <?php } ?>
 
         <?php if (!isset($_SESSION['user']) || !isset($_SESSION['user']['username'])) { ?>
@@ -39,10 +37,10 @@
         <?php } ?>
 
       </ul>
-      </div>
-      <form class="d-flex" action="">
-       <input class="form-control me-2" name="search" type="search" placeholder="Search Questions">
-       <button class="btn btn-outline-success" type="submit">Search</button>
+      <form class="d-flex ms-lg-3" action="">
+        <input class="form-control me-2" name="search" type="search" placeholder="Search Questions" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
+    </div>
   </div>
 </nav>
