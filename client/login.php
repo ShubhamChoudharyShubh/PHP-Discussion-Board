@@ -1,22 +1,26 @@
-<div class="container">
-    <h1 class="heading">Login</h1>
+<!-- Login Form -->
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-12 p-4 border rounded shadow-lg bg-light">
+            <h1 class="heading text-center mb-4">Login</h1>
 
-    <form action="./server/requests.php" method="post">
+            <form action="./server/requests.php" method="post">
 
-  <div class="col-6 offset-sm-3 margin-bottom-15">
-    <label for="email" class="form-label">User Email</label>
-    <input type="email" name="email" class="form-control" id="email" placeholder="enter user email">
-  </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">User Email</label>
+                    <input type="email" name="email" class="form-control" id="email" placeholder="Enter user email">
+                </div>
 
-  <div class="col-6 offset-sm-3 margin-bottom-15">
-    <label for="password" class="form-label">User Password</label>
-    <input type="password" name="password" class="form-control" id="password" placeholder="enter user password">
-  </div>
-  
-  <div class="col-6 offset-sm-3">
-     <button type="submit" name="login" class="btn btn-primary">Login</button>
-  </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">User Password</label>
+                    <input type="password" name="password" class="form-control" id="password" placeholder="Enter user password">
+                </div>
 
-</form>
+                <div class="d-grid">
+                    <button type="submit" name="login" class="btn btn-primary">Login</button>
+                </div>
 
+            </form>
+        </div>
+    </div>
 </div>
