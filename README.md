@@ -18,7 +18,7 @@ Welcome to the PHP Discussion Board project! This project is a simple discussion
 
 ## About the Project
 
-This project is a simple **Discussion Board** where users can ask questions, post answers, like posts, and view related questions based on categories. The main goal is to provide an interactive platform for users to share knowledge and help each other. This platform is ideal for learning PHP, MySQL, and frontend technologies like Bootstrap.
+This project is a simple **Discussion Board** where users can ask questions, post answers and view related questions based on categories. The main goal is to provide an interactive platform for users to share knowledge and help each other. This platform is ideal for learning PHP, MySQL, and frontend technologies like Bootstrap.
 
 ---
 
@@ -27,7 +27,6 @@ This project is a simple **Discussion Board** where users can ask questions, pos
 - **User Registration and Login**: Users can sign up, log in, and access the board.
 - **Ask Questions**: Logged-in users can post their questions.
 - **Answer Questions**: Users can answer posted questions.
-- **Like Questions and Answers**: Users can like both questions and answers.
 - **Display Related Questions**: Questions are displayed with related content.
 - **Categories**: Organize questions based on categories for easy browsing.
 - **Delete Own Questions**: Users can delete their own questions.
