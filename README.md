@@ -85,14 +85,11 @@ To run this project locally on your machine, follow these steps:
 3. **Answer Questions**:
    - Answer questions by visiting the question detail page.
 
-4. **Like Questions and Answers**:
-   - Like posts by clicking the like button next to questions and answers.
-
-5. **Manage Your Questions**:
+4. **Manage Your Questions**:
    - View your own questions by clicking on **My Questions**.
    - Delete your own questions if necessary.
 
-6. **Search and Browse**:
+5. **Search and Browse**:
    - Use the search bar to find questions by title or view the latest questions.
 
 ---
